@@ -39,6 +39,7 @@ namespace LoginAPP
             this.btnLogin_head = new System.Windows.Forms.Button();
             this.btn_post_body = new System.Windows.Forms.Button();
             this.btn_post_head = new System.Windows.Forms.Button();
+            this.ListTest = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnLogin
@@ -103,7 +104,7 @@ namespace LoginAPP
             // btnLogin_body
             // 
             this.btnLogin_body.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnLogin_body.Location = new System.Drawing.Point(21, 164);
+            this.btnLogin_body.Location = new System.Drawing.Point(12, 164);
             this.btnLogin_body.Name = "btnLogin_body";
             this.btnLogin_body.Size = new System.Drawing.Size(117, 29);
             this.btnLogin_body.TabIndex = 6;
@@ -114,7 +115,7 @@ namespace LoginAPP
             // btnLogin_head
             // 
             this.btnLogin_head.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnLogin_head.Location = new System.Drawing.Point(21, 209);
+            this.btnLogin_head.Location = new System.Drawing.Point(12, 209);
             this.btnLogin_head.Name = "btnLogin_head";
             this.btnLogin_head.Size = new System.Drawing.Size(117, 29);
             this.btnLogin_head.TabIndex = 7;
@@ -125,30 +126,41 @@ namespace LoginAPP
             // btn_post_body
             // 
             this.btn_post_body.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btn_post_body.Location = new System.Drawing.Point(148, 164);
+            this.btn_post_body.Location = new System.Drawing.Point(139, 164);
             this.btn_post_body.Name = "btn_post_body";
-            this.btn_post_body.Size = new System.Drawing.Size(136, 29);
+            this.btn_post_body.Size = new System.Drawing.Size(142, 29);
             this.btn_post_body.TabIndex = 8;
-            this.btn_post_body.Text = "Post from data";
+            this.btn_post_body.Text = "登入工研院";
             this.btn_post_body.UseVisualStyleBackColor = true;
             this.btn_post_body.Click += new System.EventHandler(this.btn_post_body_Click);
             // 
             // btn_post_head
             // 
             this.btn_post_head.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btn_post_head.Location = new System.Drawing.Point(148, 209);
+            this.btn_post_head.Location = new System.Drawing.Point(135, 209);
             this.btn_post_head.Name = "btn_post_head";
-            this.btn_post_head.Size = new System.Drawing.Size(136, 29);
+            this.btn_post_head.Size = new System.Drawing.Size(146, 29);
             this.btn_post_head.TabIndex = 9;
-            this.btn_post_head.Text = "Post From Data";
+            this.btn_post_head.Text = "Post工研院Body";
             this.btn_post_head.UseVisualStyleBackColor = true;
             this.btn_post_head.Click += new System.EventHandler(this.btn_post_head_Click);
+            // 
+            // ListTest
+            // 
+            this.ListTest.Location = new System.Drawing.Point(228, 119);
+            this.ListTest.Name = "ListTest";
+            this.ListTest.Size = new System.Drawing.Size(111, 29);
+            this.ListTest.TabIndex = 10;
+            this.ListTest.Text = "測試字串";
+            this.ListTest.UseVisualStyleBackColor = true;
+            this.ListTest.Click += new System.EventHandler(this.ListTest_Click);
             // 
             // frmLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(386, 261);
+            this.Controls.Add(this.ListTest);
             this.Controls.Add(this.btn_post_head);
             this.Controls.Add(this.btn_post_body);
             this.Controls.Add(this.btnLogin_head);
@@ -180,5 +192,6 @@ namespace LoginAPP
         private System.Windows.Forms.Button btnLogin_head;
         private System.Windows.Forms.Button btn_post_body;
         private System.Windows.Forms.Button btn_post_head;
+        private System.Windows.Forms.Button ListTest;
     }
 }

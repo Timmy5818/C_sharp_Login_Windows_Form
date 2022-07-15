@@ -1,15 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Text;
 using System.Windows.Forms;
-using System.Data.SqlClient;
 using System.Net.Http;
-using System.Net;
-using System.Diagnostics;
-using Newtonsoft.Json;
 
 namespace LoginAPP
 {
@@ -24,19 +16,17 @@ namespace LoginAPP
         {
 
             HttpClient httpClient = new HttpClient();
-            using (HttpClient client = httpClient)
-            {
-                var values = new Dictionary<string, string>
+            using HttpClient client = httpClient;
+            var values = new Dictionary<string, string>
             {
                 { "email_id", "timmy.app@mail.tw" },
                 { "password_id", "Timmy123" }
             };
 
-                string url = "http://localhost:8080/login";
-                var data = new FormUrlEncodedContent(values);
-                var response = await client.PostAsync(url, data);
-                Console.WriteLine(response);
-            }
+            string url = "http://localhost:8080/login";
+            var data = new FormUrlEncodedContent(values);
+            var response = await client.PostAsync(url, data);
+            Console.WriteLine(response);
 
             //SqlConnection sqlcon = new SqlConnection(@"Data Source=.\SQLEXPRESS;AttachDbFilename=C:\tools\Chocolatey GUI Build\Windows_Forms\LoginAPP\SQL DB\LoginDB.mdf;Integrated Security=True;Connect Timeout=30;User Instance=True");
             //string query = "Select * from tbl_Login Where username = '" + txtUsername.Text.Trim() + "' and password = '"+txtPassword.Text.Trim()+"'";
@@ -63,9 +53,9 @@ namespace LoginAPP
 
         private void frmLogin_Load(object sender, EventArgs e)
         {
-         
+
         }
-        
+
         static readonly HttpClient client = new HttpClient();
         private async void btnLogin_body_Click(object sender, EventArgs e)
         {
@@ -78,51 +68,125 @@ namespace LoginAPP
         private async void btnLogin_head_Click(object sender, EventArgs e)
         {
             HttpClient httpClient = new HttpClient();
-            using (HttpClient client = httpClient)
-            {
-                string url = "http://localhost:8080/login";
-                var response = await client.GetAsync(url);
-                Console.WriteLine(response);
-            }
+            using HttpClient client = httpClient;
+            string url = "http://localhost:8080/login";
+            var response = await client.GetAsync(url);
+            Console.WriteLine(response);
         }
 
         private async void btn_post_body_Click(object sender, EventArgs e)
         {
-            var url = "https://httpbin.org/post";
+            //var url = "https://httpbin.org/post";
+
+            //using var client = new HttpClient();
+
+            //var data = new Dictionary<string, string>
+            //{
+            //    {"name", "John Doe"},
+            //    {"occupation", "gardener"}
+            //};
+
+            //var res = await client.PostAsync(url, new FormUrlEncodedContent(data));
+
+            //var content = await res.Content.ReadAsStringAsync();
+            //Console.WriteLine(content);
+
+            var url = "http://localhost:8080/login";
 
             using var client = new HttpClient();
 
             var data = new Dictionary<string, string>
             {
-                {"name", "John Doe"},
-                {"occupation", "gardener"}
+                { "email", txtUsername.Text },
+                { "password", txtPassword.Text }
             };
 
             var res = await client.PostAsync(url, new FormUrlEncodedContent(data));
 
             var content = await res.Content.ReadAsStringAsync();
-            Console.WriteLine(content);
+            Console.WriteLine(res.RequestMessage.RequestUri);
 
-            
+            if (content == "OK")
+            {
+                frmMain objFrmMain = new frmMain();
+                this.Hide();
+                objFrmMain.Show();
+            }
+            else
+            {
+                MessageBox.Show("請確定你的帳號密碼是否正確");
+            }
+
+
         }
 
         private async void btn_post_head_Click(object sender, EventArgs e)
         {
 
             HttpClient httpClient = new HttpClient();
-            using (HttpClient client = httpClient)
+            using HttpClient client = httpClient;
+            var values = new Dictionary<string, string>
             {
-                var values = new Dictionary<string, string>
-            {
-                { "email_id", "timmy.app@mail.tw" },
-                { "password_id", "Timmy123" }
+                { "email", "timmy.app@mail.tw" },
+                { "password", "Timmy123123" }
             };
 
-                string url = "http://localhost:8080/login";
-                var data = new FormUrlEncodedContent(values);
-                var response = await client.PostAsync(url, data);
-                Console.WriteLine(response);
-            }
+            string url = "http://localhost:8080/login";
+            var data = new FormUrlEncodedContent(values);
+            var response = await client.PostAsync(url, data);
+            Console.WriteLine(response);
         }
+
+        private void ListTest_Click(object sender, EventArgs e)
+        {
+            Testlist();
+        }
+            static void Testlist()
+            {
+                List<string> l1 = new List<string>() { "a", "b", "c" };
+                List<string> l2 = new List<string>() { "b", "a", "e" };
+
+                foreach (string str in Intersect(l1, l2))
+                {
+                    Console.WriteLine(str);
+                }
+
+            }
+
+            static IEnumerable<T> Intersect<T>(IList<T> lhs, IList<T> rhs)
+            {
+                if (lhs == null) throw new ArgumentNullException("lhs");
+                if (rhs == null) throw new ArgumentNullException("rhs");
+
+                // build the dictionary from the shorter list
+                if (lhs.Count > rhs.Count)
+                {
+                    IList<T> tmp = rhs;
+                    rhs = lhs;
+                    lhs = tmp;
+                }
+                Dictionary<T, bool> lookup = new Dictionary<T, bool>();
+                foreach (T item in lhs)
+                {
+                    if (!lookup.ContainsKey(item)) lookup.Add(item, true);
+                }
+                foreach (T item in rhs)
+                {
+                    if (lookup.ContainsKey(item))
+                    {
+                        lookup.Remove(item); // prevent duplicates
+                        yield return item;
+
+                    }
+                }
+            }
+
+
     }
+}
+
+
+namespace net20Console
+{
+
 }
