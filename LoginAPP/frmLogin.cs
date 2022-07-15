@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Windows.Forms;
+using System.Net.NetworkInformation;
 using System.Net.Http;
 
 namespace LoginAPP
@@ -181,7 +182,23 @@ namespace LoginAPP
                 }
             }
 
+        private void MacBtn_Click(object sender, EventArgs e)
+        {
+            NetworkInterface[] nics = NetworkInterface.GetAllNetworkInterfaces();
 
+            List<string> macList = new List<string>();
+            foreach (var nic in nics)
+            {
+                // 因為電腦中可能有很多的網卡(包含虛擬的網卡)，
+                // 我只需要 Ethernet 網卡的 MAC
+                if (nic.NetworkInterfaceType == NetworkInterfaceType.Ethernet)
+                {
+                    macList.Add(nic.GetPhysicalAddress().ToString());
+                    MessageBox.Show(macList[0]);
+                    //Console.WriteLine(macList[0]);
+                }
+            }
+        }
     }
 }
 

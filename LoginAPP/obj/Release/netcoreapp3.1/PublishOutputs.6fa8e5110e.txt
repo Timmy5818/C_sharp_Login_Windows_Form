@@ -1,0 +1,16 @@
+C:\Users\Timmy\Desktop\LoginAPP.exe
+C:\Users\Timmy\Desktop\LoginAPP.dll
+C:\Users\Timmy\Desktop\LoginAPP.deps.json
+C:\Users\Timmy\Desktop\LoginAPP.runtimeconfig.json
+C:\Users\Timmy\Desktop\LoginAPP.pdb
+C:\Users\Timmy\Desktop\EntityFramework.SqlServer.dll
+C:\Users\Timmy\Desktop\EntityFramework.dll
+C:\Users\Timmy\Desktop\System.Net.Http.Formatting.dll
+C:\Users\Timmy\Desktop\Newtonsoft.Json.dll
+C:\Users\Timmy\Desktop\Newtonsoft.Json.Bson.dll
+C:\Users\Timmy\Desktop\System.Data.SqlClient.dll
+C:\Users\Timmy\Desktop\runtimes\win-arm64\native\sni.dll
+C:\Users\Timmy\Desktop\runtimes\win-x64\native\sni.dll
+C:\Users\Timmy\Desktop\runtimes\win-x86\native\sni.dll
+C:\Users\Timmy\Desktop\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\Timmy\Desktop\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll

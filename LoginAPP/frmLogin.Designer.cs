@@ -40,6 +40,7 @@ namespace LoginAPP
             this.btn_post_body = new System.Windows.Forms.Button();
             this.btn_post_head = new System.Windows.Forms.Button();
             this.ListTest = new System.Windows.Forms.Button();
+            this.MacBtn = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnLogin
@@ -155,11 +156,23 @@ namespace LoginAPP
             this.ListTest.UseVisualStyleBackColor = true;
             this.ListTest.Click += new System.EventHandler(this.ListTest_Click);
             // 
+            // MacBtn
+            // 
+            this.MacBtn.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.MacBtn.Location = new System.Drawing.Point(12, 252);
+            this.MacBtn.Name = "MacBtn";
+            this.MacBtn.Size = new System.Drawing.Size(126, 29);
+            this.MacBtn.TabIndex = 11;
+            this.MacBtn.Text = "取得MAC位置";
+            this.MacBtn.UseVisualStyleBackColor = true;
+            this.MacBtn.Click += new System.EventHandler(this.MacBtn_Click);
+            // 
             // frmLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(386, 261);
+            this.ClientSize = new System.Drawing.Size(380, 293);
+            this.Controls.Add(this.MacBtn);
             this.Controls.Add(this.ListTest);
             this.Controls.Add(this.btn_post_head);
             this.Controls.Add(this.btn_post_body);
@@ -193,5 +206,6 @@ namespace LoginAPP
         private System.Windows.Forms.Button btn_post_body;
         private System.Windows.Forms.Button btn_post_head;
         private System.Windows.Forms.Button ListTest;
+        private System.Windows.Forms.Button MacBtn;
     }
 }
