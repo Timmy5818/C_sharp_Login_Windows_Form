@@ -41,6 +41,8 @@ namespace LoginAPP
             this.btn_post_head = new System.Windows.Forms.Button();
             this.ListTest = new System.Windows.Forms.Button();
             this.MacBtn = new System.Windows.Forms.Button();
+            this.MacBtn2 = new System.Windows.Forms.Button();
+            this.MoboBtn = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnLogin
@@ -167,11 +169,35 @@ namespace LoginAPP
             this.MacBtn.UseVisualStyleBackColor = true;
             this.MacBtn.Click += new System.EventHandler(this.MacBtn_Click);
             // 
+            // MacBtn2
+            // 
+            this.MacBtn2.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.MacBtn2.Location = new System.Drawing.Point(144, 252);
+            this.MacBtn2.Name = "MacBtn2";
+            this.MacBtn2.Size = new System.Drawing.Size(224, 29);
+            this.MacBtn2.TabIndex = 12;
+            this.MacBtn2.Text = "取得全部網路卡的MAC位址";
+            this.MacBtn2.UseVisualStyleBackColor = true;
+            this.MacBtn2.Click += new System.EventHandler(this.MacBtn2_Click);
+            // 
+            // MoboBtn
+            // 
+            this.MoboBtn.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.MoboBtn.Location = new System.Drawing.Point(12, 288);
+            this.MoboBtn.Name = "MoboBtn";
+            this.MoboBtn.Size = new System.Drawing.Size(200, 29);
+            this.MoboBtn.TabIndex = 13;
+            this.MoboBtn.Text = "取得CPU ID+硬體識別碼";
+            this.MoboBtn.UseVisualStyleBackColor = true;
+            this.MoboBtn.Click += new System.EventHandler(this.MoboBtn_Click);
+            // 
             // frmLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(380, 293);
+            this.ClientSize = new System.Drawing.Size(382, 329);
+            this.Controls.Add(this.MoboBtn);
+            this.Controls.Add(this.MacBtn2);
             this.Controls.Add(this.MacBtn);
             this.Controls.Add(this.ListTest);
             this.Controls.Add(this.btn_post_head);
@@ -207,5 +233,7 @@ namespace LoginAPP
         private System.Windows.Forms.Button btn_post_head;
         private System.Windows.Forms.Button ListTest;
         private System.Windows.Forms.Button MacBtn;
+        private System.Windows.Forms.Button MacBtn2;
+        private System.Windows.Forms.Button MoboBtn;
     }
 }

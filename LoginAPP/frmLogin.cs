@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Windows.Forms;
 using System.Net.NetworkInformation;
 using System.Net.Http;
+using System.Management;
 
 namespace LoginAPP
 {
@@ -194,10 +195,70 @@ namespace LoginAPP
                 if (nic.NetworkInterfaceType == NetworkInterfaceType.Ethernet)
                 {
                     macList.Add(nic.GetPhysicalAddress().ToString());
-                    MessageBox.Show(macList[0]);
-                    //Console.WriteLine(macList[0]);
+                    //MessageBox.Show(macList[0]);
+                    Console.WriteLine(macList[0]);
                 }
             }
+        }
+
+        private void MacBtn2_Click(object sender, EventArgs e)
+        {
+            IPGlobalProperties computerProperties = IPGlobalProperties.GetIPGlobalProperties();
+            NetworkInterface[] nics = NetworkInterface.GetAllNetworkInterfaces();
+            Console.WriteLine("Interface information for {0}.{1}     ",
+                    computerProperties.HostName, computerProperties.DomainName);
+            if (nics == null || nics.Length < 1)
+            {
+                Console.WriteLine("  No network interfaces found.");
+                return;
+            }
+
+            Console.WriteLine("  Number of interfaces .................... : {0}", nics.Length);
+            foreach (NetworkInterface adapter in nics)
+            {
+                IPInterfaceProperties properties = adapter.GetIPProperties(); //  .GetIPInterfaceProperties();
+                Console.WriteLine();
+                Console.WriteLine(adapter.Description);
+                Console.WriteLine(String.Empty.PadLeft(adapter.Description.Length, '='));
+                Console.WriteLine("  Interface type .......................... : {0}", adapter.NetworkInterfaceType);
+                Console.Write("  Physical address ........................ : ");
+                PhysicalAddress address = adapter.GetPhysicalAddress();
+                byte[] bytes = address.GetAddressBytes();
+                for (int i = 0; i < bytes.Length; i++)
+                {
+                    // Display the physical address in hexadecimal.
+                    Console.Write("{0}", bytes[i].ToString("X2"));
+                    // Insert a hyphen after each byte, unless we are at the end of the
+                    // address.
+                    if (i != bytes.Length - 1)
+                    {
+                        Console.Write("-");
+                    }
+                }
+                Console.WriteLine();
+            }
+        }
+
+        private void MoboBtn_Click(object sender, EventArgs e)
+        {
+            ManagementObjectSearcher mos = new ManagementObjectSearcher("Select ProcessorID From Win32_processor");
+            ManagementObjectCollection mbsList = mos.Get();
+            string processorId = string.Empty;
+            foreach (ManagementBaseObject mo in mbsList)
+            {
+                processorId = mo["ProcessorID"] as string;
+            }
+
+            mos = new ManagementObjectSearcher("SELECT UUID FROM Win32_ComputerSystemProduct");
+            mbsList = mos.Get();
+            string systemId = string.Empty;
+            foreach (ManagementBaseObject mo in mbsList)
+            {
+                systemId = mo["UUID"] as string;
+            }
+
+            var compIdStr = $"{processorId}{systemId}";
+            Console.WriteLine(compIdStr);
         }
     }
 }

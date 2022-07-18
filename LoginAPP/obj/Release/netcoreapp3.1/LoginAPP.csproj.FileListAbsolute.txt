@@ -27,3 +27,13 @@ C:\tools\Chocolatey GUI Build\Windows_Forms\LoginAPP\LoginAPP\obj\Release\netcor
 C:\tools\Chocolatey GUI Build\Windows_Forms\LoginAPP\LoginAPP\obj\Release\netcoreapp3.1\LoginAPP.dll
 C:\tools\Chocolatey GUI Build\Windows_Forms\LoginAPP\LoginAPP\obj\Release\netcoreapp3.1\LoginAPP.pdb
 C:\tools\Chocolatey GUI Build\Windows_Forms\LoginAPP\LoginAPP\obj\Release\netcoreapp3.1\LoginAPP.genruntimeconfig.cache
+C:\tools\Chocolatey GUI Build\Windows_Forms\LoginAPP\LoginAPP\bin\Release\netcoreapp3.1\Microsoft.Win32.Registry.dll
+C:\tools\Chocolatey GUI Build\Windows_Forms\LoginAPP\LoginAPP\bin\Release\netcoreapp3.1\System.CodeDom.dll
+C:\tools\Chocolatey GUI Build\Windows_Forms\LoginAPP\LoginAPP\bin\Release\netcoreapp3.1\System.Management.dll
+C:\tools\Chocolatey GUI Build\Windows_Forms\LoginAPP\LoginAPP\bin\Release\netcoreapp3.1\System.Security.AccessControl.dll
+C:\tools\Chocolatey GUI Build\Windows_Forms\LoginAPP\LoginAPP\bin\Release\netcoreapp3.1\System.Security.Principal.Windows.dll
+C:\tools\Chocolatey GUI Build\Windows_Forms\LoginAPP\LoginAPP\bin\Release\netcoreapp3.1\runtimes\win\lib\netstandard2.0\Microsoft.Win32.Registry.dll
+C:\tools\Chocolatey GUI Build\Windows_Forms\LoginAPP\LoginAPP\bin\Release\netcoreapp3.1\runtimes\win\lib\netcoreapp3.1\System.Management.dll
+C:\tools\Chocolatey GUI Build\Windows_Forms\LoginAPP\LoginAPP\bin\Release\netcoreapp3.1\runtimes\win\lib\netcoreapp2.0\System.Security.AccessControl.dll
+C:\tools\Chocolatey GUI Build\Windows_Forms\LoginAPP\LoginAPP\bin\Release\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.1\System.Security.Principal.Windows.dll
+C:\tools\Chocolatey GUI Build\Windows_Forms\LoginAPP\LoginAPP\bin\Release\netcoreapp3.1\runtimes\win\lib\netcoreapp2.1\System.Security.Principal.Windows.dll
