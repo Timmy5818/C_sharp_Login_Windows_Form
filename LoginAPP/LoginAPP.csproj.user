@@ -4,6 +4,9 @@
     <_LastSelectedProfileId>C:\tools\Chocolatey GUI Build\Windows_Forms\LoginAPP\LoginAPP\Properties\PublishProfiles\FolderProfile.pubxml</_LastSelectedProfileId>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Update="web.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="frmMain.cs">
       <SubType>Form</SubType>
     </Compile>

@@ -43,6 +43,7 @@ namespace LoginAPP
             this.MacBtn = new System.Windows.Forms.Button();
             this.MacBtn2 = new System.Windows.Forms.Button();
             this.MoboBtn = new System.Windows.Forms.Button();
+            this.Btnweb = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnLogin
@@ -191,11 +192,23 @@ namespace LoginAPP
             this.MoboBtn.UseVisualStyleBackColor = true;
             this.MoboBtn.Click += new System.EventHandler(this.MoboBtn_Click);
             // 
+            // Btnweb
+            // 
+            this.Btnweb.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.Btnweb.Location = new System.Drawing.Point(218, 288);
+            this.Btnweb.Name = "Btnweb";
+            this.Btnweb.Size = new System.Drawing.Size(150, 29);
+            this.Btnweb.TabIndex = 14;
+            this.Btnweb.Text = "網頁測試";
+            this.Btnweb.UseVisualStyleBackColor = true;
+            this.Btnweb.Click += new System.EventHandler(this.Btnweb_Click);
+            // 
             // frmLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(382, 329);
+            this.Controls.Add(this.Btnweb);
             this.Controls.Add(this.MoboBtn);
             this.Controls.Add(this.MacBtn2);
             this.Controls.Add(this.MacBtn);
@@ -235,5 +248,6 @@ namespace LoginAPP
         private System.Windows.Forms.Button MacBtn;
         private System.Windows.Forms.Button MacBtn2;
         private System.Windows.Forms.Button MoboBtn;
+        private System.Windows.Forms.Button Btnweb;
     }
 }

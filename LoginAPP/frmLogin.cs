@@ -260,11 +260,13 @@ namespace LoginAPP
             var compIdStr = $"{processorId}{systemId}";
             Console.WriteLine(compIdStr);
         }
+
+
+        private void Btnweb_Click(object sender, EventArgs e)
+        {
+            web f = new web();
+            this.Visible = false;
+            f.Visible = true;
+        }
     }
-}
-
-
-namespace net20Console
-{
-
 }

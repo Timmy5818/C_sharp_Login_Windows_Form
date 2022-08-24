@@ -37,3 +37,10 @@ C:\tools\Chocolatey GUI Build\Windows_Forms\LoginAPP\LoginAPP\bin\Release\netcor
 C:\tools\Chocolatey GUI Build\Windows_Forms\LoginAPP\LoginAPP\bin\Release\netcoreapp3.1\runtimes\win\lib\netcoreapp2.0\System.Security.AccessControl.dll
 C:\tools\Chocolatey GUI Build\Windows_Forms\LoginAPP\LoginAPP\bin\Release\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.1\System.Security.Principal.Windows.dll
 C:\tools\Chocolatey GUI Build\Windows_Forms\LoginAPP\LoginAPP\bin\Release\netcoreapp3.1\runtimes\win\lib\netcoreapp2.1\System.Security.Principal.Windows.dll
+C:\tools\Chocolatey GUI Build\Windows_Forms\LoginAPP\LoginAPP\obj\Release\netcoreapp3.1\LoginAPP.web.resources
+C:\tools\Chocolatey GUI Build\Windows_Forms\LoginAPP\LoginAPP\bin\Release\netcoreapp3.1\runtimes\win-x86\native\WebView2Loader.dll
+C:\tools\Chocolatey GUI Build\Windows_Forms\LoginAPP\LoginAPP\bin\Release\netcoreapp3.1\runtimes\win-x64\native\WebView2Loader.dll
+C:\tools\Chocolatey GUI Build\Windows_Forms\LoginAPP\LoginAPP\bin\Release\netcoreapp3.1\runtimes\win-arm64\native\WebView2Loader.dll
+C:\tools\Chocolatey GUI Build\Windows_Forms\LoginAPP\LoginAPP\bin\Release\netcoreapp3.1\Microsoft.Web.WebView2.Core.dll
+C:\tools\Chocolatey GUI Build\Windows_Forms\LoginAPP\LoginAPP\bin\Release\netcoreapp3.1\Microsoft.Web.WebView2.WinForms.dll
+C:\tools\Chocolatey GUI Build\Windows_Forms\LoginAPP\LoginAPP\bin\Release\netcoreapp3.1\Microsoft.Web.WebView2.Wpf.dll
